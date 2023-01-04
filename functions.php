@@ -317,6 +317,7 @@ function show_subtitle()
             </option>
             <option name="visa">VISA</option>
             <option name="master">Master Card</option>
+            <option name="master">Uala</option>
         </select>
         <select>
             <option name="una">1</option>
