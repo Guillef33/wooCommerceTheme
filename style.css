@@ -1,0 +1,121 @@
+/*
+Theme Name: WooCommerce Guille
+Theme URI: https://magnetitte.com.ar
+Author: Guillermo Flores
+Author URI: https: //magnetitte.com.ar
+Description: Theme custom para crear tiendas online
+Requires PHP: 7
+Version: 0.1
+License: GNU General Public License v2 or later
+*/
+
+/* Root */
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.test {
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    color: white;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    height: 10vh;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Front Page */
+
+#hero {
+    height: 550px;
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 600px !important;
+    object-fit: cover;
+    object-position: top;
+}
+
+.carousel-caption {
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3.4sem;
+    /* background: black; */
+    height: 0px;
+    height: 100px;
+}
+
+.content {
+    height: auto;
+    /* padding: 0.3em 0em; */
+}
+
+.product-wrapper-front-page {
+    padding: 30px 0px;
+}
+
+.post-home-wrapper {
+    display: flex;
+    gap: 2em;
+    padding: 2em 0em;
+}
+
+.post-home-card h3 {
+    font-size: 1.2em;
+}
+
+/* .woocommerce ul.products li.first,
+.woocommerce-page ul.products li.first {
+    width: 80%;
+} */
+
+.post-home-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Pages */
+
+.main-container {
+    padding: 0.5em 0em;
+}
+
+/* Footer */
+
+footer {
+    height: 10vh;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

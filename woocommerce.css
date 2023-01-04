@@ -1,0 +1,110 @@
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    background: whitesmoke;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 10px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    background: whitesmoke;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+}
+
+.woocommerce-cart {
+    /* max-width: 450px !important;
+    position: absolute;
+    right: 0; */
+}
+
+.mini-cart-custom {
+    /* background-color: red; */
+}
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: black;
+    width: 100%;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.quantity {
+    height: 35.7px;
+}
+
+/* Other Button */
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    border: 1px solid #767677;
+    background-color: white;
+    width: 100%;
+    padding: 80px auto;
+    border-radius: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.read-more-btn {
+    border: 1px solid #767677;
+    background-color: white;
+    width: 60%;
+    padding: 80px auto;
+    border-radius: 0px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Product Primary Button */
+.woocommerce div.product form.cart div.quantity {
+    float: none;
+    width: 100%;
+}
+
+.woocommerce .quantity .qty {
+    height: 100%;
+    border: none;
+    width: 100%;
+    border: 1px solid #767677;
+}
+
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+
+.woocommerce div.product {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2em;
+}
+
+.woocommerce div.product div.images.woocommerce-product-gallery {
+    width: 100%;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+    width: 50%;
+}
+
+.woocommerce div.product .product_title {
+    font-size: 1.5rem;
+}
+
+.woocommerce div.product div.summary {
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* 
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: red !important;
+} */
