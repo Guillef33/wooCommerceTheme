@@ -295,6 +295,8 @@ add_action('customize_register', 'frontPageEditable');
 
 add_action('woocommerce_single_product_summary', 'show_subtitle');
 
+
+
 function show_subtitle()
 {
     global $product;

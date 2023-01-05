@@ -11,10 +11,17 @@ License: GNU General Public License v2 or later
 
 /* Root */
 
-body {
-    font-family: 'Open Sans', sans-serif;
+#menu-top-menu {
+    background-color: red;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: red;
+}
+.search-site-header {
+    background-color: red;
+}
 .test {
     background-color: white;
     padding: 0;
