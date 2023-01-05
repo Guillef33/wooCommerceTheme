@@ -26,13 +26,13 @@
             <div class="search-site-header">
                 <form action="/search" method="get">
                     <input type="text" name="search_text">
-                    <label>Type</label>
+                    <!-- <label>Type</label>
                     <select name="category_name">
                         <option value="">Any</option>
                         <option value="fast-food">Fast-Food</option>
                         <option value="ropa">Ropa</option>
-                    </select>
-                    <button type="submit" name="">Search</button>
+                    </select> -->
+                    <button type="submit" name="" class="button-search">Search</button>
                 </form>
             </div>
 
