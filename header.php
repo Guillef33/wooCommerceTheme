@@ -11,10 +11,10 @@
 </head>
 
 <body <?php body_class('test'); ?> <header>
-    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg " style="background-color: white;">
         <div class="container">
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" class="img-fluid">
+                <img src="<?php bloginfo('template_directory'); ?>/images/logo-afa.png" class="header-logo">
             </a>
             <?php
 

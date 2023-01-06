@@ -15,9 +15,9 @@ if ($_GET['search_text'] && !empty($_GET['search_text'])) {
 
 $type = 'product';
 
-if ($_GET['category_name'] && !empty($_GET['category_name'])) {
-    $category = $_GET['category_name'];
-}
+// if ($_GET['category_name'] && !empty($_GET['category_name'])) {
+//     $category = $_GET['category_name'];
+// }
 
 ?>
 
@@ -28,7 +28,7 @@ if ($_GET['category_name'] && !empty($_GET['category_name'])) {
     // Revisar esto
     //if (isset($type) && isset($text)) {
     $args = array(
-        'product_cat' => $category,
+        // 'product_cat' => $category,
         'post_type' => $type,
         'posts_per_page' => -1,
         's' => $text,
@@ -47,15 +47,24 @@ if ($_GET['category_name'] && !empty($_GET['category_name'])) {
 
         while ($query->have_posts()) : $query->the_post();
         ?>
-            <div class="posts clearfix">
-                <h5><?php the_title(); ?></h5>
-                <strong>
-                    <?php if (get_post_type() == 'product') {
-                        echo 'Product';
-                    } ?>
-                </strong>
 
+
+            <div class="card">
+                <a href="<?php the_permalink(); ?>">
+                    <?php
+                    if (has_post_thumbnail()) : ?>
+                        <img src="<?php the_post_thumbnail_url(''); ?>" class="card-img-top" />
+                    <?php endif; ?>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title"><?php the_title(); ?></h5>
+                    <p class="card-text"><?php the_excerpt(); ?></p>
+                    <a href="<?php the_permalink(); ?>">
+                        <button class="btn btn-dark">Ver producto</button>
+                    </a>
+                </div>
             </div>
+
 
     <?php endwhile;
     } else {

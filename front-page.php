@@ -51,6 +51,8 @@
 
                     <?php the_content(); ?>
 
+
+
             <?php endwhile;
             else : endif; ?>
             <?php if (get_theme_mod('front-display') == 'Yes') { ?>
