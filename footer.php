@@ -1,13 +1,28 @@
-<footer>
-    Todos los derechos reservados
-</footer>
+    <?php
+
+    /**
+     * The template file displaying the footer
+     *
+
+     * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+     *
+     * @package Lucky Store
+
+     */
+
+    ?>
 
 
-<?php wp_footer(); ?>
+    <footer>
+        Todos los derechos reservados
+    </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-<!-- <script src="slider.js" type="module"></script> -->
 
-</body>
+    <?php wp_footer(); ?>
 
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="slider.js" type="module"></script> -->
+
+    </body>
+
+    </html>

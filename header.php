@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <title>WooCommerce Guille</title>
+/**
+ * The template file for displaying the deader
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Lucky Store
 
-    <?php wp_head(); ?>
+ */
+wp_head();
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-
-</head>
+?>
 
 <body <?php body_class('test'); ?> <header>
     <nav class="navbar navbar-expand-lg " style="background-color: white;">
