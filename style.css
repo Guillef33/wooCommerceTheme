@@ -124,6 +124,13 @@ header h1 {
     border-radius: 5px;
 }
 
+/* Blog Page */
+
+.blog-post {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 /* Pages */
 
 .main-container {
