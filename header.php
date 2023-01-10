@@ -18,6 +18,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
     <?php wp_head(); ?>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto&display=swap'); </style>
 </head>
 
 <body <?php body_class('test'); ?> <header>
@@ -35,7 +40,7 @@
             <!-- Buscador de productos -->
             <div class="search-site-header">
                 <form action="/search" method="get">
-                    <input type="text" name="search_text">
+                    <input type="text" class="search_text" name="search_text">
                     <!-- <label>Type</label>
                     <select name="category_name">
                         <option value="">Any</option>

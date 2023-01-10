@@ -230,6 +230,8 @@ function google_fonts()
 }
 add_action('wp_enqueue_scripts', 'google_fonts');
 
+
+
 // Add Front Page section to admin appereance 
 function frontPageEditable($wp_customize)
 {
@@ -302,4 +304,8 @@ add_action('customize_register', 'frontPageEditable');
 // Add Content to Single Product + Calculadora
 
 add_action('woocommerce_single_product_summary', 'show_subtitle');
+
+<<<<<<< HEAD
+=======
+
 
