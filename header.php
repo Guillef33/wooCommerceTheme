@@ -1,9 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+
+/**
+ * The template file for displaying the deader
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package Lucky Store
+
+ */
+?>
+
+<!doctype html>
+<html <?php language_attributes(); ?>>
 
 <head>
-    <title>WooCommerce Guille</title>
-
+    <meta charset="<?php bloginfo('charset'); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
     <?php wp_head(); ?>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -13,10 +26,10 @@
 </head>
 
 <body <?php body_class('test'); ?> <header>
-    <nav class="navbar navbar-expand-lg " style="background-color: #e3f2fd;">
+    <nav class="navbar navbar-expand-lg " style="background-color: white;">
         <div class="container">
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" class="img-fluid">
+                <img src="<?php bloginfo('template_directory'); ?>/images/logo-afa.png" class="header-logo">
             </a>
             <?php
 
