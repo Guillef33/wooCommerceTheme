@@ -25,7 +25,16 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto&display=swap'); </style>
 </head>
 
-<body <?php body_class('test'); ?> <header>
+<body <?php body_class('test'); ?>> 
+
+<div class="container-fluid textopromo">
+    <div class="container">
+        <p class="texto-container-fluid">A partir de 10.000 ARS, envío gratuito </p>
+    </div>
+    
+</div>
+
+<header>
     <nav class="navbar navbar-expand-lg " style="background-color: white;">
         <div class="container">
             <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
