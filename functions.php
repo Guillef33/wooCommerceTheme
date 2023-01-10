@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Lucky Store functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package WordPress
+ */
+
 function loadStylesheets()
 {
     wp_register_style(
@@ -295,38 +303,3 @@ add_action('customize_register', 'frontPageEditable');
 
 add_action('woocommerce_single_product_summary', 'show_subtitle');
 
-
-
-function show_subtitle()
-{
-    global $product;
-
-    $id = $product->get_id();
-
-    $category =    $product->get_category_ids();
-
-    $array = implode(" ", $category);
-
-    ?>
-    <form>
-        <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
-        <select>
-            <option name="american" style="background-image: url (" <?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg");">
-                <img src="<?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg" class="d-block w-100" alt="...">
-                AMEX
-            </option>
-            <option name="visa">VISA</option>
-            <option name="master">Master Card</option>
-            <option name="master">Uala</option>
-        </select>
-        <select>
-            <option name="una">1</option>
-            <option name="tres">3</option>
-            <option name="seis">6</option>
-
-        </select>
-        <button type="submit">Calcular interes</button>
-        <p>El precio final es $precio</p>
-    </form>
-<?php
-}
