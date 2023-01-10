@@ -22,6 +22,20 @@ function loadStylesheets()
 
 add_action('wp_enqueue_scripts', 'loadStylesheets');
 
+function cargarCartCSS()
+{
+    wp_register_style(
+        'stylesheet',
+        get_template_directory_uri() . '/cart.css',
+        '',
+        1,
+        'all'
+    );
+    wp_enqueue_style('stylesheet');
+}
+
+add_action('wp_enqueue_scripts', 'cargarCartCSS');
+
 function loadWoocommerce()
 {
     wp_register_style(
@@ -74,6 +88,16 @@ function bootstrapCdn()
 }
 
 add_action('wp_enqueue_scripts', 'bootstrapCdn');
+
+// Add Font 
+
+add_action("wp_enqueue_scripts", "fuenteRoboto");
+
+function fuenteRoboto()
+{
+    $url = "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto&display=swap";
+    wp_enqueue_style('google_fonts', $url);
+}
 
 
 // Add Menu

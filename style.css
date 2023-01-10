@@ -16,15 +16,17 @@ License: GNU General Public License v2 or later
 .container {
     font-family: 'Roboto', sans-serif;
 }
+
 .search-site-header input :hover {
     color: rgb(32, 97, 137);
 }
+
 .search-site-header button {
     transition: border ease 1s;
     border: solid thin #eceff1;
     padding-left: 10px;
     padding-right: 35px;
-    background-color:  rgb(81, 25, 172);
+    background-color: rgb(81, 25, 172);
     text-overflow: ellipsis;
     border-radius: 7px;
     border-color: #2d3337;
@@ -74,6 +76,10 @@ header h1 {
     width: 50px;
 }
 
+.button-search {
+    font-family: 'Roboto', sans-serif;
+}
+
 /* Front Page */
 
 #hero {
@@ -90,80 +96,79 @@ header h1 {
 /* armado de efecto carrousel.caption*/
 .carousel-caption {
     color: hsla(0, 0%, 0%, .9);
-  font: normal 30px Varela Round, sans-serif;
-  height: 30px;
-  left: 0;
-  letter-spacing: 5px;
-  margin: 0 0 0 0;
-  position: absolute;
-  text-align: center;
-  text-transform: uppercase;
-  top: 50%;
-  width: 100%;
-  animation: move linear 2000ms infinite;  
+    font: normal 30px Varela Round, sans-serif;
+    height: 30px;
+    left: 0;
+    letter-spacing: 5px;
+    margin: 0 0 0 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%;
+    animation: move linear 2000ms infinite;
 }
 
 @keyframes move {
-  0% {
-    text-shadow:
-      4px -4px 0 hsla(0, 100%, 50%, 1), 
-      3px -3px 0 hsla(0, 100%, 50%, 1), 
-      2px -2px 0 hsla(0, 100%, 50%, 1), 
-      1px -1px 0 hsla(0, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  25% {    
-    text-shadow:      
-      -4px -4px 0 hsla(180, 100%, 50%, 1), 
-      -3px -3px 0 hsla(180, 100%, 50%, 1), 
-      -2px -2px 0 hsla(180, 100%, 50%, 1), 
-      -1px -1px 0 hsla(180, 100%, 50%, 1),
-      4px 4px 0 hsla(0, 100%, 50%, 1), 
-      3px 3px 0 hsla(0, 100%, 50%, 1), 
-      2px 2px 0 hsla(0, 100%, 50%, 1), 
-      1px 1px 0 hsla(0, 100%, 50%, 1)      
-    ;
-  }
-  50% {
-    text-shadow:
-      -4px 4px 0 hsla(0, 100%, 50%, 1), 
-      -3px 3px 0 hsla(0, 100%, 50%, 1), 
-      -2px 2px 0 hsla(0, 100%, 50%, 1), 
-      -1px 1px 0 hsla(0, 100%, 50%, 1),
-      4px -4px 0 hsla(180, 100%, 50%, 1), 
-      3px -3px 0 hsla(180, 100%, 50%, 1), 
-      2px -2px 0 hsla(180, 100%, 50%, 1), 
-      1px -1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }
-  75% {
-    text-shadow:
-      4px 4px 0 hsla(180, 100%, 50%, 1), 
-      3px 3px 0 hsla(180, 100%, 50%, 1), 
-      2px 2px 0 hsla(180, 100%, 50%, 1), 
-      1px 1px 0 hsla(180, 100%, 50%, 1),
-      -4px -4px 0 hsla(0, 100%, 50%, 1), 
-      -3px -3px 0 hsla(0, 100%, 50%, 1), 
-      -2px -2px 0 hsla(0, 100%, 50%, 1), 
-      -1px -1px 0 hsla(0, 100%, 50%, 1)      
-    ;
-  }
-  100% {
-    text-shadow:
-      4px -4px 0 hsla(0, 100%, 50%, 1), 
-      3px -3px 0 hsla(0, 100%, 50%, 1), 
-      2px -2px 0 hsla(0, 100%, 50%, 1), 
-      1px -1px 0 hsla(0, 100%, 50%, 1),
-      -4px 4px 0 hsla(180, 100%, 50%, 1), 
-      -3px 3px 0 hsla(180, 100%, 50%, 1), 
-      -2px 2px 0 hsla(180, 100%, 50%, 1), 
-      -1px 1px 0 hsla(180, 100%, 50%, 1)
-    ;
-  }  
+    0% {
+        text-shadow:
+            4px -4px 0 hsla(0, 100%, 50%, 1),
+            3px -3px 0 hsla(0, 100%, 50%, 1),
+            2px -2px 0 hsla(0, 100%, 50%, 1),
+            1px -1px 0 hsla(0, 100%, 50%, 1),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    25% {
+        text-shadow:
+            -4px -4px 0 hsla(180, 100%, 50%, 1),
+            -3px -3px 0 hsla(180, 100%, 50%, 1),
+            -2px -2px 0 hsla(180, 100%, 50%, 1),
+            -1px -1px 0 hsla(180, 100%, 50%, 1),
+            4px 4px 0 hsla(0, 100%, 50%, 1),
+            3px 3px 0 hsla(0, 100%, 50%, 1),
+            2px 2px 0 hsla(0, 100%, 50%, 1),
+            1px 1px 0 hsla(0, 100%, 50%, 1);
+    }
+
+    50% {
+        text-shadow:
+            -4px 4px 0 hsla(0, 100%, 50%, 1),
+            -3px 3px 0 hsla(0, 100%, 50%, 1),
+            -2px 2px 0 hsla(0, 100%, 50%, 1),
+            -1px 1px 0 hsla(0, 100%, 50%, 1),
+            4px -4px 0 hsla(180, 100%, 50%, 1),
+            3px -3px 0 hsla(180, 100%, 50%, 1),
+            2px -2px 0 hsla(180, 100%, 50%, 1),
+            1px -1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    75% {
+        text-shadow:
+            4px 4px 0 hsla(180, 100%, 50%, 1),
+            3px 3px 0 hsla(180, 100%, 50%, 1),
+            2px 2px 0 hsla(180, 100%, 50%, 1),
+            1px 1px 0 hsla(180, 100%, 50%, 1),
+            -4px -4px 0 hsla(0, 100%, 50%, 1),
+            -3px -3px 0 hsla(0, 100%, 50%, 1),
+            -2px -2px 0 hsla(0, 100%, 50%, 1),
+            -1px -1px 0 hsla(0, 100%, 50%, 1);
+    }
+
+    100% {
+        text-shadow:
+            4px -4px 0 hsla(0, 100%, 50%, 1),
+            3px -3px 0 hsla(0, 100%, 50%, 1),
+            2px -2px 0 hsla(0, 100%, 50%, 1),
+            1px -1px 0 hsla(0, 100%, 50%, 1),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
 }
 
 
@@ -177,6 +182,7 @@ header h1 {
     height: 100px;
     font-family: 'Roboto', sans-serif;
 }
+
 /* armado de efecto carrousel.caption*/
 
 .card img {
@@ -189,8 +195,14 @@ header h1 {
     /* padding: 0.3em 0em; */
 }
 
-.content:hover .products.carousel-inner.columns-3 {-webkit-transform:scale(1.3);transform:scale(1.3);}
-.content {overflow:hidden;}
+.content:hover .products.carousel-inner.columns-3 {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+}
+
+.content {
+    overflow: hidden;
+}
 
 .product-wrapper-front-page {
     padding: 30px 0px;
