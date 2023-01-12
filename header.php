@@ -26,43 +26,45 @@
     <style> @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Roboto&display=swap'); </style> -->
 </head>
 
-<body <?php body_class('test'); ?>> 
+<body <?php body_class('test'); ?>>
 
-<div class="container-fluid textopromo">
-    <div class="container">
-        <p class="texto-container-fluid">A partir de 10.000 ARS, envío gratuito </p>
+    <div class="alert-promo-home">
+        <div class="container alert-promo-home-wrapper">
+            <p>Envío gratuito a partir de 10.000 ARS</p>
+            <p> | </p>
+            <p>3 CUOTAS SIN INTERÉS</p>
+        </div>
+
     </div>
-    
-</div>
 
-<header>
-    <nav class="navbar navbar-expand-lg " style="background-color: white;">
-        <div class="container">
-            <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-                <img src="<?php bloginfo('template_directory'); ?>/images/logo-afa.png" class="header-logo">
-            </a>
-            <?php
+    <header>
+        <nav class="navbar navbar-expand-lg " style="background-color: white;">
+            <div class="container">
+                <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+                    <img src="<?php bloginfo('template_directory'); ?>/images/logo-afa.png" class="header-logo">
+                </a>
+                <?php
 
-            wp_nav_menu(array('theme_location' => 'top-menu'))
+                wp_nav_menu(array('theme_location' => 'top-menu'))
 
-            ?>
+                ?>
 
-            <!-- Buscador de productos -->
-            <div class="search-site-header">
-                <form action="/search" method="get">
-                    <input type="text" class="search_text" name="search_text">
-                    <!-- <label>Type</label>
+                <!-- Buscador de productos -->
+                <div class="search-site-header">
+                    <form action="/search" method="get">
+                        <input type="text" class="search_text" name="search_text">
+                        <!-- <label>Type</label>
                     <select name="category_name">
                         <option value="">Any</option>
                         <option value="fast-food">Fast-Food</option>
                         <option value="ropa">Ropa</option>
                     </select> -->
-                    <button type="submit" name="" class="button-search">Search</button>
-                </form>
-            </div>
+                        <button type="submit" name="" class="button-search">Search</button>
+                    </form>
+                </div>
 
-            <!-- Buscador por tipo de post -->
-            <!-- <div class="search-site-header">
+                <!-- Buscador por tipo de post -->
+                <!-- <div class="search-site-header">
                 <form action="/search" method="get">
                     <input type="text" name="search_text">
                     <label>Type</label>
@@ -75,16 +77,16 @@
                 </form>
             </div> -->
 
-            <?php
+                <?php
 
-            if (is_active_sidebar('custom-header-widget')) : ?>
-                <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
-                    <?php dynamic_sidebar('custom-header-widget'); ?>
-                </div>
+                if (is_active_sidebar('custom-header-widget')) : ?>
+                    <div id="header-widget-area" class="chw-widget-area widget-area" role="complementary">
+                        <?php dynamic_sidebar('custom-header-widget'); ?>
+                    </div>
 
-            <?php endif; ?>
+                <?php endif; ?>
 
 
-        </div>
-    </nav>
+            </div>
+        </nav>
     </header>

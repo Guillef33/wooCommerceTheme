@@ -325,14 +325,6 @@ function frontPageEditable($wp_customize)
 
 add_action('customize_register', 'frontPageEditable');
 
-
-
-// function my_excerpt_length($length)
-// {
-//     return 10;
-// }
-// add_filter('excerpt_length', 'my_excerpt_length');
-
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woo-custom.php';
 }

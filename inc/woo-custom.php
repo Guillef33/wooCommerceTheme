@@ -1,4 +1,3 @@
-
 <?php
 
 // Add Content to Single Product + Calculadora
@@ -15,7 +14,7 @@ function show_subtitle()
 
     $array = implode(" ", $category);
 
-    ?>
+?>
     <form>
         <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
         <select>
@@ -40,6 +39,17 @@ function show_subtitle()
 }
 
 add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+
+// TODO revisar porque no aplica el filtro de acortar el excerpt a productos
+if (is_shop()) {
+
+
+    function product_excerpt_length($length)
+    {
+        return 10;
+    }
+    add_filter('excerpt_length', 'product_excerpt_length', 1);
+}
 
 
 ?>
