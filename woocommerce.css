@@ -162,8 +162,8 @@
 /* Products Cards */
 
 .woocommerce ul.products li.product a img:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
     transition: all 1s ease-out;
 }
 

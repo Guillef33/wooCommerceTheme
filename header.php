@@ -34,7 +34,6 @@
             <p> | </p>
             <p>3 CUOTAS SIN INTERÉS</p>
         </div>
-
     </div>
 
     <header>
