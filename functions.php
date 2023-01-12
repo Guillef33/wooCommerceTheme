@@ -325,9 +325,7 @@ function frontPageEditable($wp_customize)
 
 add_action('customize_register', 'frontPageEditable');
 
-// Add Content to Single Product + Calculadora
 
-add_action('woocommerce_single_product_summary', 'show_subtitle');
 
 // function my_excerpt_length($length)
 // {
