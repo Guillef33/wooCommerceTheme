@@ -19,8 +19,9 @@
     right: 0; */
 }
 
-.mini-cart-custom {
-    /* background-color: red; */
+.wc-block-mini-cart {
+    color: black;
+
 }
 
 .woocommerce #respond input#submit.alt,
