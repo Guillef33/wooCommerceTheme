@@ -109,4 +109,63 @@
     background-color: red !important;
 } */
 
+/* Search */
+
+.card-grid-search-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 30px 0px;
+}
+
+.search-breadcrumb {
+    padding: 30px 0px 0px 0px;
+}
+
+.search-site-header input :hover {
+    color: rgb(32, 97, 137);
+}
+
+.search-site-header button {
+    transition: border ease 1s;
+    padding: 2px 30px;
+    background-color: rgb(81, 25, 172);
+    text-overflow: ellipsis;
+    border-radius: 22px;
+    border-color: #2d3337;
+    color: white;
+    text-align: center;
+
+}
+
+.search_text {
+    border-radius: 22px;
+    background-color: rgb(250, 249, 251);
+}
+
+/* Products Cards */
+
+.woocommerce ul.products li.product a img:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    transition: all 1s ease-out;
+}
+
+.woocommerce-LoopProduct-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black !important;
+}
+
+.price {
+    color: black !important;
+    font-size: 14px;
+}
+
+.content {
+    overflow: hidden;
+}
+
 /* Cart */

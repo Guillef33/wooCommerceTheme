@@ -34,33 +34,6 @@ h2:link, h2:visited, h2:active {
     font-family: 'Roboto', sans-serif;
 }
 
-.search-site-header input :hover {
-    color: rgb(32, 97, 137);
-}
-
-.search-site-header button {
-    transition: border ease 1s;
-    border: solid thin #eceff1;
-    padding-left: 10px;
-    padding-right: 35px;
-    background-color: rgb(81, 25, 172);
-    text-overflow: ellipsis;
-    border-radius: 7px;
-    border-color: #2d3337;
-    color: white;
-
-}
-
-.search_text {
-    border-radius: 22px;
-    background-color: rgb(250, 249, 251);
-}
-
-.test {
-    background-color: white;
-    padding: 0;
-    margin: 0;
-}
 
 header {
     color: white;
@@ -220,25 +193,6 @@ header h1 {
 }
 
 
-
-.woocommerce ul.products li.product a img:hover{
-    -webkit-transform:scale(1.15);
-    transform:scale(1.15);
-}
-.woocommerce-LoopProduct-link {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black !important;
-}
-
-.price {  
-    color: black !important;
-    font-size: 14px;
-}
-
-.content {overflow:hidden;}
 
 .product-wrapper-front-page {
     padding: 30px 0px;
