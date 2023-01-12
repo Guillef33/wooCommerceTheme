@@ -50,32 +50,20 @@
                 ?>
 
                 <!-- Buscador de productos -->
-                <div class="search-site-header">
+                <div class="header-search">
                     <form action="/search" method="get">
-                        <input type="text" class="search_text" name="search_text">
-                        <!-- <label>Type</label>
-                    <select name="category_name">
-                        <option value="">Any</option>
-                        <option value="fast-food">Fast-Food</option>
-                        <option value="ropa">Ropa</option>
-                    </select> -->
-                        <button type="submit" name="" class="button-search">Search</button>
+                        <div class="header-search-wrapper">
+                            <div class="header-search-input-wrapper">
+                                <input type="text" class="search_text" name="search_text">
+                                <button type="submit" name="" class="button-search">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/icono-busqueda.svg" class="icono-busqueda">
+                                </button>
+
+                            </div>
+
+                        </div>
                     </form>
                 </div>
-
-                <!-- Buscador por tipo de post -->
-                <!-- <div class="search-site-header">
-                <form action="/search" method="get">
-                    <input type="text" name="search_text">
-                    <label>Type</label>
-                    <select name="type">
-                        <option value="">Any</option>
-                        <option value="post">Post</option>
-                        <option value="product">Products</option>
-                    </select>
-                    <button type="submit" name="">Search</button>
-                </form>
-            </div> -->
 
                 <?php
 

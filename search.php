@@ -9,15 +9,7 @@ if ($_GET['search_text'] && !empty($_GET['search_text'])) {
     $text = $_GET['search_text'];
 }
 
-// if ($_GET['type'] && !empty($_GET['type'])) {
-// $type = $_GET['type'];
-//}
-
 $type = 'product';
-
-// if ($_GET['category_name'] && !empty($_GET['category_name'])) {
-//     $category = $_GET['category_name'];
-// }
 
 ?>
 

@@ -79,7 +79,11 @@ header h1 {
 }
 
 .button-search {
-    font-family: 'Roboto', sans-serif;
+    background: white;
+    position: absolute;
+    border: none;
+    top: 0px;
+    width: 10px;
 }
 
 /* Front Page */

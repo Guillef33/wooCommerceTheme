@@ -122,21 +122,37 @@
     padding: 30px 0px 0px 0px;
 }
 
-.search-site-header input :hover {
+.header-search-wrapper {
+    display: flex;
+}
+
+.header-search input :hover {
     color: rgb(32, 97, 137);
 }
 
-.search-site-header button {
+.header-search-input-wrapper {
+    position: relative;
+}
+
+.icono-busqueda {
+    width: 20px;
+    position: absolute;
+    right: 20px;
+    top: 5px;
+}
+
+/* 
+.header-search button {
     transition: border ease 1s;
-    padding: 2px 30px;
+    padding: 0px 30px;
+    margin-left: 3px;
     background-color: rgb(81, 25, 172);
     text-overflow: ellipsis;
     border-radius: 22px;
     border-color: #2d3337;
     color: white;
-    text-align: center;
 
-}
+} */
 
 .search_text {
     border-radius: 22px;
