@@ -74,8 +74,24 @@ header h1 {
     text-transform: uppercase;
 }
 
+.navbar {
+    z-index: 9;
+}
+
+.navbar-collapse {
+    background-color: white;
+}
+
+#carouselExample {
+    z-index: 0;
+}
+
 .header-logo {
     width: 50px;
+}
+
+.navbar-custom {
+    width: 100%;
 }
 
 .button-search {
