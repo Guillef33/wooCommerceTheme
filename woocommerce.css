@@ -186,3 +186,54 @@
 }
 
 /* Cart */
+
+/* Cart */
+
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+    width: 150px;
+}
+
+/* Overrides the template cart */
+
+.lucky-store-grid-cart-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Remove float from cart-totals */
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+    float: none;
+    width: 100%;
+}
+
+.woocommerce table.shop_table {
+    border: none;
+}
+
+
+.woocommerce-cart table.cart img {
+    width: 300px;
+}
+
+.cart_totals h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.shop_table thead tr {
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+.wc-proceed-to-checkout a {}
+
+.checkout-button {
+    text-align: center !important;
+    font-size: 12px !important;
+}
