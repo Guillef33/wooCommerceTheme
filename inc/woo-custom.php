@@ -38,7 +38,7 @@ function show_subtitle()
 <?php
 }
 
-add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+// add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
 
 // TODO revisar porque no aplica el filtro de acortar el excerpt a productos
 if (is_shop()) {
