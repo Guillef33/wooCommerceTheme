@@ -41,7 +41,6 @@ h2:active {
 
 
 
-
 .container {
     font-family: 'Roboto', sans-serif;
 }
@@ -57,8 +56,12 @@ header h1 {
     padding: 0;
 }
 
-.navbar {
+/* .navbar {
     height: 10vh;
+} */
+
+.navbar-toggler {
+    margin-top: 20px;
 }
 
 .menu {
@@ -72,10 +75,31 @@ header h1 {
 .menu-item a {
     color: black;
     text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar {
+    z-index: 9;
+}
+
+.navbar-collapse {
+    background-color: white;
+}
+
+#carouselExample {
+    z-index: 0;
 }
 
 .header-logo {
     width: 50px;
+}
+
+.navbar-custom {
+    width: 100%;
+}
+
+#primary-menu li {
+    margin-right: 10px;
 }
 
 .button-search {
@@ -100,9 +124,9 @@ header h1 {
 }
 
 /* armado de efecto carrousel.caption*/
-.carousel-caption {
+/* .carousel-caption {
     color: hsla(0, 0%, 0%, .9);
-    font: normal 30px Varela Round, sans-serif;
+    /* font: normal 30px Varela Round, sans-serif; 
     height: 30px;
     left: 0;
     letter-spacing: 5px;
@@ -112,10 +136,10 @@ header h1 {
     text-transform: uppercase;
     top: 80%;
     width: 100%;
-    animation: move linear 2000ms infinite;
+    /* animation: move linear 2000ms infinite; 
 }
 
-@keyframes move {
+/* @keyframes move {
     0% {
         text-shadow:
             4px -4px 0 hsla(0, 100%, 50%, 1),
@@ -175,14 +199,14 @@ header h1 {
             -2px 2px 0 hsla(180, 100%, 50%, 1),
             -1px 1px 0 hsla(180, 100%, 50%, 1);
     }
-}
+} */
 
 
 .carousel-caption {
     color: white;
     font-weight: 900;
     text-transform: uppercase;
-    font-size: 3.4sem;
+    font-size: 3.4em;
     /* background: black; */
     height: 0px;
     height: 100px;
@@ -198,7 +222,7 @@ header h1 {
 
 .content {
     height: auto;
-    /* padding: 0.3em 0em; */
+
 }
 
 
@@ -224,10 +248,6 @@ header h1 {
     font-size: 1.2em;
 }
 
-/* .woocommerce ul.products li.first,
-.woocommerce-page ul.products li.first {
-    width: 80%;
-} */
 
 .post-home-card img {
     height: 300px;

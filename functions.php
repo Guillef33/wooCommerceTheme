@@ -134,6 +134,20 @@ register_sidebar(
     )
 );
 
+function wpb_widgets_init()
+{
+
+    register_sidebar(array(
+        'name'          => 'Custom Header Widget Area',
+        'id'            => 'custom-header-widget',
+        'before_widget' => '<div class=”chw-widget”>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2 class=”chw-title”>',
+        'after_title'   => '</h2>',
+    ));
+}
+add_action('widgets_init', 'wpb_widgets_init');
+
 
 
 // Add Woocommerce Theme Support
@@ -159,17 +173,6 @@ add_action('after_setup_theme', 'yourtheme_setup');
 
 
 add_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
-
-/**
- * Rename "home" in breadcrumb
- */
-add_filter('woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_home_text');
-function wcc_change_breadcrumb_home_text($defaults)
-{
-    // Change the breadcrumb home text from 'Home' to 'Apartment'
-    $defaults['home'] = 'Apartment';
-    return $defaults;
-}
 
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
 

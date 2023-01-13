@@ -19,25 +19,16 @@
     right: 0; */
 }
 
-.mini-cart-custom {
-    /* background-color: red; */
-}
+.wc-block-mini-cart {
+    color: black;
 
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt {
-    background-color: black;
-    width: 100%;
-    text-align: left;
-    text-transform: uppercase;
 }
 
 .quantity {
     height: 35.7px;
 }
 
-/* Other Button */
+/* TODO aca tenemos que tener cuidado, no darle a todo */
 
 .woocommerce #respond input#submit,
 .woocommerce a.button,
@@ -45,7 +36,7 @@
 .woocommerce input.button {
     border: 1px solid #767677;
     background-color: white;
-    width: 100%;
+    /* width: 100%; */
     padding: 80px auto;
     border-radius: 0px;
     text-align: left;
@@ -141,6 +132,23 @@
     top: 5px;
 }
 
+.navbar-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.navbar>.container {
+    align-items: normal !important;
+}
+
+@media screen and (max-width: 678px) {
+    .navbar {
+        height: 100px;
+    }
+
+}
+
 /* 
 .header-search button {
     transition: border ease 1s;
@@ -162,9 +170,10 @@
 /* Products Cards */
 
 .woocommerce ul.products li.product a img:hover {
-    -webkit-transform: scale(1.15);
-    transform: scale(1.15);
+    -webkit-transform: scale(1.03);
+    transform: scale(1.03);
     transition: all 1s ease-out;
+
 }
 
 .woocommerce-LoopProduct-link {
@@ -184,4 +193,88 @@
     overflow: hidden;
 }
 
+/* Intento centrar el boton en la card pero no funciona */
+.products .carousel-inner li {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carrousel-item .product {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+}
+
 /* Cart */
+
+/* Cart */
+
+
+.woocommerce-cart table.cart td.actions .coupon .input-text {
+    width: 150px;
+}
+
+/* Overrides the template cart */
+
+.lucky-store-grid-cart-wrapper {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Remove float from cart-totals */
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
+    float: none;
+    width: 100%;
+}
+
+.woocommerce table.shop_table {
+    border: none;
+}
+
+
+.woocommerce-cart table.cart img {
+    width: 300px;
+}
+
+.cart_totals h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.shop_table thead tr {
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+
+.wc-proceed-to-checkout a {}
+
+.checkout-button {
+    text-align: center !important;
+    font-size: 12px !important;
+}
+
+.product-title-h1,
+.page-title {
+    text-transform: uppercase;
+    font-size: 22px;
+    padding: 1em 0em;
+}
+
+.woocommerce table.cart td.actions .coupon {
+    float: none;
+    display: flex;
+}
+
+/* Checkout */
+
+.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
