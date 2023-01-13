@@ -94,6 +94,10 @@ header h1 {
     width: 100%;
 }
 
+#primary-menu li {
+    margin-right: 10px;
+}
+
 .button-search {
     background: white;
     position: absolute;
