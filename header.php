@@ -42,7 +42,7 @@
                 <a class="navbar-brand" href="<?php bloginfo('url'); ?>">
                     <img src="<?php bloginfo('template_directory'); ?>/images/logo-afa.png" class="header-logo">
                 </a>
-                <div>
+                <div class="navbar-mobile-wrapper">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

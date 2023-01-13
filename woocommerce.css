@@ -132,6 +132,23 @@
     top: 5px;
 }
 
+.navbar-mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.navbar>.container {
+    align-items: normal !important;
+}
+
+@media screen and (max-width: 678px) {
+    .navbar {
+        height: 100px;
+    }
+
+}
+
 /* 
 .header-search button {
     transition: border ease 1s;
@@ -242,7 +259,8 @@
     font-size: 12px !important;
 }
 
-.product-title-h1, .page-title {
+.product-title-h1,
+.page-title {
     text-transform: uppercase;
     font-size: 22px;
     padding: 1em 0em;
