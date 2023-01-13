@@ -252,3 +252,11 @@
     float: none;
     display: flex;
 }
+
+/* Checkout */
+
+.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
