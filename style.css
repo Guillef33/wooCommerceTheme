@@ -256,6 +256,17 @@ header h1 {
     border-radius: 5px;
 }
 
+.product_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+.price {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+}
+
+
 /* Blog Page */
 
 .blog-post {
@@ -267,6 +278,7 @@ header h1 {
 
 .main-container {
     padding: 0.5em 0em;
+   
 }
 
 /* Footer */
