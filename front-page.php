@@ -77,7 +77,7 @@
         <!-- Seccion Home COn imagen -->
 
         <section class="seccion-imagen">
-            <h1>Caramelos</h1>
+            <h1>Los mejores looks de los campeones del mundo</h1>
             <img src="<?php bloginfo('template_directory'); ?>/images/argentinafinalista.webp" class="">
         </section>
 
