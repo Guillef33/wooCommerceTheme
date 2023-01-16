@@ -257,17 +257,21 @@ function google_fonts()
 }
 add_action('wp_enqueue_scripts', 'google_fonts');
 
-function bps_enqueue_font() { 
-    wp_enqueue_style('google-font-robotomedium', 'fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400', array());}
-    
-    add_action( 'wp_enqueue_scripts', 'bps_enqueue_font' );
+function bps_enqueue_font()
+{
+    wp_enqueue_style('google-font-robotomedium', 'fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400', array());
+}
 
-    function google_roboto_bold () { 
-        wp_enqueue_style('google-font-robotbold', 'https://fonts.googleapis.com/css2?family=Roboto:wght@900', array());}
-        
-        add_action( 'wp_enqueue_scripts', 'google_roboto_bold' );
-    
-    
+add_action('wp_enqueue_scripts', 'bps_enqueue_font');
+
+function google_roboto_bold()
+{
+    wp_enqueue_style('google-font-robotbold', 'https://fonts.googleapis.com/css2?family=Roboto:wght@900', array());
+}
+
+add_action('wp_enqueue_scripts', 'google_roboto_bold');
+
+
 
 // Add Front Page section to admin appereance 
 function frontPageEditable($wp_customize)
