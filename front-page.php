@@ -82,9 +82,7 @@
         </section>
 
 
-
         <!-- Posteos del blog -->
-
 
         <section id="post-home">
             <h2>Read the best posts from this month</h2>
@@ -94,6 +92,11 @@
 
             // The Query
             $blogPosts = new WP_Query(array('category_name' => 'Blog'));
+
+            // var_dump($blogPosts);
+            // echo ('<pre>');
+            // print_r($blogPosts);
+            // echo ('</pre>');
 
             $blogPostsLimit2 = new WP_Query('cat=3&posts_per_page=3&orderby=title');
 
