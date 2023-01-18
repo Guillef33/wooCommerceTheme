@@ -19,21 +19,21 @@
         </div>
         <div class="carousel-item">
             <a href="/product-category/alcohol/">
-
                 <h2 class="carousel-caption">Celebremos con nuestros colores</h2>
                 <img src="<?php bloginfo('template_directory'); ?>/images/festejo.jfif" class="d-block w-100" alt="...">
-                < </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+            </a>
         </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
+</div>
 </div>
 
 <div class="content">
@@ -77,14 +77,12 @@
         <!-- Seccion Home COn imagen -->
 
         <section class="seccion-imagen">
-            <h1>Caramelos</h1>
+            <h1>Los mejores looks de los campeones del mundo</h1>
             <img src="<?php bloginfo('template_directory'); ?>/images/argentinafinalista.webp" class="">
         </section>
 
 
-
         <!-- Posteos del blog -->
-
 
         <section id="post-home">
             <h2>Read the best posts from this month</h2>
@@ -94,6 +92,11 @@
 
             // The Query
             $blogPosts = new WP_Query(array('category_name' => 'Blog'));
+
+            // var_dump($blogPosts);
+            // echo ('<pre>');
+            // print_r($blogPosts);
+            // echo ('</pre>');
 
             $blogPostsLimit2 = new WP_Query('cat=3&posts_per_page=3&orderby=title');
 
