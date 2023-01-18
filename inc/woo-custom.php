@@ -15,9 +15,10 @@ function show_subtitle()
     $array = implode(" ", $category);
 
 ?>
+
     <form>
         <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
-        <select>
+        <select class="botontarjetascredito">
             <option name="american" style="background-image: url (" <?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg");">
                 <img src="<?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg" class="d-block w-100" alt="...">
                 AMEX
@@ -26,14 +27,14 @@ function show_subtitle()
             <option name="master">Master Card</option>
             <option name="master">Uala</option>
         </select>
-        <select>
+        <select class="botoncantidadcuotas">
             <option name="una">1</option>
             <option name="tres">3</option>
             <option name="seis">6</option>
 
         </select>
-        <button type="submit">Calcular interes</button>
-        <p>El precio final es $precio</p>
+        <button type="submit" class="botoninteres">Calcular interes</button>
+        <p class="destacadoinferior">+ de 30 medios de pagos disponibles</p>
     </form>
 <?php
 }
