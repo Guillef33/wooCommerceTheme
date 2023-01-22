@@ -18,15 +18,16 @@ function show_subtitle()
 
 ?>
 
-    <div id="form-sucess"></div>
     <div id="form-error"></div>
 
     <form id='cuotas_form' class="calculadora-cuotas-form" method="post">
         <h2>¡Nuestras promociones bancarias!</h2>
         <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
         <fieldset>
-            <select id="select-tarjetas" name="tarjetas" class="boton-tarjetas-credito">
-                <option name="master" style="background-image:url(" <?php bloginfo('template_directory'); ?>/images/alternativa.jpg")">Master Card</option>
+            <select class="form-select" id="select-tarjetas" name="tarjetas" class="boton-tarjetas-credito">
+                <option selected>Elije tu tarjeta</option>
+
+                <option name="master">Master Card</option>
                 <option name=" american">AMEX</option>
                 <option name="uala">Uala</option>
                 <option name="visa">VISA</option>
@@ -34,25 +35,101 @@ function show_subtitle()
             </select>
         </fieldset>
         <fieldset>
-            <select id="select-cuotas" name="cuotas" class="boton-cantidad-cuotas">
+            <select class="form-select" aria-label="Select de cuotas" id="select-cuotas" name="cuotas" class="boton-cantidad-cuotas">
+                <option selected>Elije cuantas cuotas</option>
                 <option name="1">1</option>
                 <option name="3">3</option>
                 <option name="6">6</option>
 
             </select>
         </fieldset>
-        <button type="submit" class="boton-interes">Calcular interes</button>
+        <button type="submit" class="btn btn-dark">Calcular interes</button>
+
+
+        <div id="form-sucess" class="alert alert-primary" role="alert" style="display: none;"></div>
     </form>
 
     <script>
-        $('#cuotas_form').submit(function(event) {
-            event.preventDefault();
-            var form = $(this);
-            console.log(form)
-        })
+        function getData(form) {
+            var formData = new FormData(form);
+
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
+
+            let formularioValores = Object.fromEntries(formData);
+            console.log(formularioValores)
+
+            let numero_de_cuotas = formularioValores.cuotas;
+            let tarjetas = formularioValores.tarjetas;
+
+
+            let precioProducto = document.getElementsByClassName('price')[0];
+            let numberPrecioProducto = Number(precioProducto.textContent)
+            console.log(precioProducto.textContent);
+            console.log(numberPrecioProducto)
+            let interes_tarjeta = null;
+
+            switch (formularioValores.tarjetas) {
+                case (formularioValores.tarjetas = 'master'):
+                    interes_tarjeta = 0.3;
+                    break;
+                case (formularioValores.tarjetas = 'visa'):
+                    interes_tarjeta = 0.4;
+                    break;
+                case (formularioValores.tarjetas = 'uala'):
+                    interes_tarjeta = 0.5;
+                    break;
+                default:
+                    (formularioValores.tarjetas = 'american');
+                    interes_tarjeta = 0.6;
+                    break;
+            }
+
+
+            switch (formularioValores.cuotas) {
+                case formularioValores.cuotas = '3':
+                    interes_cuota = 0.3;
+                    break;
+                case formularioValores.cuotas = '6':
+                    interes_cuota = 0.6;
+                    break;
+                default:
+                    formularioValores.cuotas = '1';
+                    interes_cuota = 0.1;
+                    break;
+            }
+
+            let interes = interes_tarjeta * (1 + interes_cuota);
+
+            let total = Math.round(Number(numberPrecioProducto * (1 + interes)));
+
+            let precio_cuota = Math.round(Number(total / numero_de_cuotas));
+
+            let formulario = document.getElementById("form-sucess");
+
+            console.log(tarjetas)
+
+            if (typeof tarjetas !== 'undefined') {
+                formulario.style.display = 'block';
+
+                formulario.textContent = `Elegiste ${tarjetas} en ${formularioValores.cuotas}
+            cuotas y el precio que vas a pagar en total es de ${total} y el montopor cuota es de ${precio_cuota} `;
+            }
+        }
+
+
+        let formData = document.getElementById("cuotas_form").addEventListener("submit", function(e) {
+            e.preventDefault();
+            getData(e.target);
+            console.log(e.target)
+        });
+
+        getData(formData)
     </script>
 
     <?php
+
 
     // Get the price of the product
     $price = $_product->get_price();
@@ -105,19 +182,13 @@ function show_subtitle()
 
     $precio_cuota = round($total / $numero_de_cuotas);
     // Solucion temporal usar valor de array $_POST
-
-
-    if (isset($_POST['cuotas']) &&  (isset($_POST['tarjetas']))) {
-        echo '<p>Elegiste ' . $_POST['tarjetas'] . 'en ' . $_POST['cuotas'] .  ' cuotas y el precio que vas a pagar en total es de ' . $total .  'y el monto por cuota es de ' . $precio_cuota . '</p>';
-    }
+    // if (isset($_POST['cuotas']) &&  (isset($_POST['tarjetas']))) {
+    //     echo '<p class="alert alert-danger" role="alert">Elegiste ' . $_POST['tarjetas'] . 'en ' . $_POST['cuotas'] .  ' cuotas y el precio que vas a pagar en total es de ' . $total .  'y el monto por cuota es de ' . $precio_cuota . '</p>';
+    // }
 
     $_product->set_price($total);
 
-    $_ENV["PRICE"] = $total;
-
     ?>
-
-    <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>"><?php echo $_product->get_price(); ?></p>
 
 <?php
 }

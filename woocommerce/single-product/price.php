@@ -15,7 +15,7 @@
  * @package WooCommerce\Templates
  * @version 3.0.0
  */
-
+    
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
@@ -24,9 +24,7 @@ global $product;
 
 $id = $product->get_id();
 $_product = wc_get_product($id);
-$_product->set_price('20.100');
-
-
+// $_product->set_price('20.100');
 
 ?>
 <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>"><?php echo $_product->get_price(); ?></p>
