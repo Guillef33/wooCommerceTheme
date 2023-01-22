@@ -25,7 +25,7 @@ function show_subtitle()
         <h2>¡Nuestras promociones bancarias!</h2>
         <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
         <fieldset>
-            <select id="select-tarjetas" name="tarjetas">
+            <select id="select-tarjetas" name="tarjetas" class="boton-tarjetas-credito">
                 <option name="master" style="background-image:url(" <?php bloginfo('template_directory'); ?>/images/alternativa.jpg")">Master Card</option>
                 <option name=" american">AMEX</option>
                 <option name="uala">Uala</option>
@@ -34,14 +34,14 @@ function show_subtitle()
             </select>
         </fieldset>
         <fieldset>
-            <select id="select-cuotas" name="cuotas">
+            <select id="select-cuotas" name="cuotas" class="boton-cantidad-cuotas">
                 <option name="1">1</option>
                 <option name="3">3</option>
                 <option name="6">6</option>
 
             </select>
         </fieldset>
-        <button type="submit">Calcular interes</button>
+        <button type="submit" class="boton-interes">Calcular interes</button>
     </form>
 
     <script>
@@ -109,13 +109,9 @@ function show_subtitle()
     // Solucion temporal usar valor de array $_POST
 
 
-
     if (isset($_POST['cuotas']) &&  (isset($_POST['tarjetas']))) {
         echo '<p>Elegiste ' . $_POST['tarjetas'] . 'en ' . $_POST['cuotas'] .  ' cuotas y el precio que vas a pagar en total es de ' . $total .  'y el monto por cuota es de ' . $precio_cuota . '</p>';
     }
-
-    // $_product->set_price('200');
-
 
     $_product->set_price($total);
 

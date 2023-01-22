@@ -270,28 +270,28 @@ header h1 {
     font-weight: bolder;
 }
 
-.botoninteres {
+.boton-interes {
     background-color: black;
     color: white;
     margin: 10px;
     border-radius: 6px;
 }
 
-.botontarjetascredito {
+.boton-tarjetas-credito {
     background-color: white;
     color: black;
     margin: 10px;
     border-radius: 6px;
 }
 
-.botoncantidadcuotas  {
+.boton-cantidad-cuotas {
     background-color: white;
     color: black;
     margin: 4px;
     border-radius: 6px;
-}
+}   
 
-.destacadoinferior {
+.destacado-inferior {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 16px;
@@ -299,7 +299,7 @@ header h1 {
     letter-spacing: 0;
     color: gray;
     margin: 10px;
-   text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Blog Page */
@@ -313,7 +313,7 @@ header h1 {
 
 .main-container {
     padding: 0.5em 0em;
-   
+
 }
 
 
