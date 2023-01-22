@@ -16,75 +16,136 @@ function show_subtitle()
 
     $_product = wc_get_product($id);
 
-    // Ejemplo https://www.fravega.com/p/heladera-ciclica-sigma-2f1200pa-239lts-plata-160813/
-
-    // Calculadora de Cuotas
-    $price = $_product->get_price();
-    $numero_de_cuotas = 3;
-    $tasa_interes = 100;
-
-    // $tasa_interes = if (cuota == 3) {
-    //     $tasa_interes = 100;
-    // } else if (cuota == 6) {
-    //     $tasa_interes = 150;
-    // }
-
-    $interes = $tasa_interes / 100;
-
-    $tasa = $tasa_interes * $price + $price;
-
-    $price_con_interes = $price * (1 + $interes);
-
-    $cuota = $price_con_interes / $numero_de_cuotas;
-
-    // $tasa_de_interes = ($tasa_interes_anual * $numero_de_cuotas * ($price / $numero_de_cuotas))  / 100;
-
-    // $precio_con_interes = ($price / $numero_de_cuotas) + $tasa_de_interes;
-
-    var_dump('El precio es de:' . $price . '<br />');
-    // var_dump('Tasa de interes:' . $interes . '<br />');
-    // var_dump('La tasa es:' . $tasa . '<br />');
-    var_dump('El coste es de :' . $price_con_interes . '<br />');
-    var_dump('Vas a tener que pagar una cuota de :' . $cuota . '<br />');
-    // var_dump("El precio final con interes es de:" . $precio_con_interes * 3 . '<br />');
-
 ?>
-    <form>
+
+    <div id="form-sucess"></div>
+    <div id="form-error"></div>
+
+    <form id='cuotas_form' class="calculadora-cuotas-form" method="post">
         <h2>¡Nuestras promociones bancarias!</h2>
         <h5>Calcula las cuotas de acuerdo a tu tarjeta</h5>
-        <select>
-            <option name="american" style="background-image: url (" <?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg");">
-                <img src="<?php bloginfo('template_directory'); ?>/images/logosBancos/amex.jpg" class="d-block w-100" alt="...">
-                AMEX
-            </option>
-            <option name="visa">VISA</option>
-            <option name="master">Master Card</option>
-            <option name="master">Uala</option>
-        </select>
-        <select>
-            <option name="una">1</option>
-            <option name="tres">3</option>
-            <option name="seis">6</option>
+        <fieldset>
+            <select id="select-tarjetas" name="tarjetas">
+                <option name="master" style="background-image:url(" <?php bloginfo('template_directory'); ?>/images/alternativa.jpg")">Master Card</option>
+                <option name=" american">AMEX</option>
+                <option name="uala">Uala</option>
+                <option name="visa">VISA</option>
 
-        </select>
+            </select>
+        </fieldset>
+        <fieldset>
+            <select id="select-cuotas" name="cuotas">
+                <option name="1">1</option>
+                <option name="3">3</option>
+                <option name="6">6</option>
+
+            </select>
+        </fieldset>
         <button type="submit">Calcular interes</button>
-        <p>El precio final es $precio</p>
     </form>
-<?php
-}
 
-// add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+    <script>
+        $('#cuotas_form').submit(function(event) {
+            event.preventDefault();
+            var form = $(this);
+            console.log(form)
+        })
+    </script>
 
-// TODO revisar porque no aplica el filtro de acortar el excerpt a productos
-if (is_shop()) {
+    <?php
 
+    // Get the price of the product
+    $price = $_product->get_price();
 
-    function product_excerpt_length($length)
-    {
-        return 10;
+    $tarjeta = '';
+
+    if (isset($_POST['cuotas'])) {
+        $numero_de_cuotas = $_POST['cuotas'];
+    };
+
+    if (isset($_POST['tarjetas'])) {
+        $tarjetas = $_POST['tarjetas'];
+    };
+
+    $interes_tarjeta = null;
+
+    switch ($tarjetas) {
+        case ($tarjetas = 'master'):
+            $interes_tarjeta = 0.3;
+            break;
+        case ($tarjetas = 'visa'):
+            $interes_tarjeta = 0.4;
+            break;
+        case ($tarjetas = 'uala'):
+            $interes_tarjeta = 0.5;
+            break;
+        default:
+            ($tarjetas = 'american');
+            $interes_tarjeta = 0.6;
+            break;
     }
-    add_filter('excerpt_length', 'product_excerpt_length', 1);
+
+
+    switch ($numero_de_cuotas) {
+        case $numero_de_cuotas = '3':
+            $interes_cuota = 0.3;
+            break;
+        case $numero_de_cuotas = '6':
+            $interes_cuota = 0.6;
+            break;
+        default:
+            $numero_de_cuotas = '1';
+            $interes_cuota = 0.1;
+            break;
+    }
+
+    // var_dump($_POST);
+
+    $interes = $interes_tarjeta * (1 + $interes_cuota);
+
+    $total = round($price * (1 + $interes));
+
+    $precio_cuota = round($total / $numero_de_cuotas);
+    // Solucion temporal usar valor de array $_POST
+
+
+
+    if (isset($_POST['cuotas']) &&  (isset($_POST['tarjetas']))) {
+        echo '<p>Elegiste ' . $_POST['tarjetas'] . 'en ' . $_POST['cuotas'] .  ' cuotas y el precio que vas a pagar en total es de ' . $total .  'y el monto por cuota es de ' . $precio_cuota . '</p>';
+    }
+
+    // $_product->set_price('200');
+
+
+    $_product->set_price($total);
+
+    $_ENV["PRICE"] = $total;
+
+    ?>
+
+    <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>"><?php echo $_product->get_price(); ?></p>
+
+<?php
+    // var_dump($nuevoPrecio);
+    // function return_custom_price($product, $total)
+    // {
+    //     global $product;
+
+    //     $id = $product->get_id();
+
+    //     $_product = wc_get_product($id);
+
+    //     $price = $total;
+    //     return $price;
+    // }
+    // add_filter('woocommerce_get_price', 'return_custom_price', 10, 2);
+
+
+    // update_post_meta();
+
+    // var_dump($price = $total);
+    // var_dump($_product->set_price(0));
+
+    // $_product->set_price($total);
+    // $_product->save();
 }
-
-
-?>
