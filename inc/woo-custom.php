@@ -99,8 +99,6 @@ function show_subtitle()
             break;
     }
 
-    // var_dump($_POST);
-
     $interes = $interes_tarjeta * (1 + $interes_cuota);
 
     $total = round($price * (1 + $interes));
@@ -122,26 +120,4 @@ function show_subtitle()
     <p class="<?php echo esc_attr(apply_filters('woocommerce_product_price_class', 'price')); ?>"><?php echo $_product->get_price(); ?></p>
 
 <?php
-    // var_dump($nuevoPrecio);
-    // function return_custom_price($product, $total)
-    // {
-    //     global $product;
-
-    //     $id = $product->get_id();
-
-    //     $_product = wc_get_product($id);
-
-    //     $price = $total;
-    //     return $price;
-    // }
-    // add_filter('woocommerce_get_price', 'return_custom_price', 10, 2);
-
-
-    // update_post_meta();
-
-    // var_dump($price = $total);
-    // var_dump($_product->set_price(0));
-
-    // $_product->set_price($total);
-    // $_product->save();
 }
