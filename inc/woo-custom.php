@@ -2,7 +2,7 @@
 
 // Add Content to Single Product + Calculadora
 
-add_action('woocommerce_single_product_summary', 'show_subtitle');
+// add_action('woocommerce_single_product_summary', 'show_subtitle');
 
 function show_subtitle()
 {
