@@ -14,7 +14,7 @@
 
 
     <footer>
-        Todos los derechos reservados
+        <p><?php echo get_theme_mod('set_copyright', 'Copyright X - All Rights Reserved'); ?></p>
     </footer>
 
 

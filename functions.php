@@ -345,3 +345,6 @@ add_action('customize_register', 'frontPageEditable');
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woo-custom.php';
 }
+
+// Requiring the customizer.php file
+require get_template_directory() . '/inc/customizer.php';
